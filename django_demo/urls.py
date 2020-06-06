@@ -20,4 +20,5 @@ urlpatterns = [
     path('my_auth/', include('my_auth.urls')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+    path('rest_demo/', include('rest_demo.urls')),
 ]

@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_demo.apps.RestDemoConfig',
+    'rest_framework',
     'my_auth.apps.MyAuthConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -180,4 +182,13 @@ LOGGING = {
             'level': 'INFO',
         }
     }
+}
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }
